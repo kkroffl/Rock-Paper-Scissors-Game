@@ -1,0 +1,101 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+}
+
+/* ===== GAME CONTAINER ===== */
+.game-container {
+  background: #020617;
+  border-radius: 16px;
+  padding: 28px 32px;
+  width: 50%;
+  height: 50vh;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.game-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  color: #f8fafc;
+}
+
+/* ===== BUTTON GROUP ===== */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+/* ===== MOVE BUTTONS ===== */
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 12px;
+  background: #020617;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s;
+}
+
+/* Hover + Active effects */
+button:hover {
+  transform: translateY(-4px);
+  background: #020617;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ===== RESET BUTTON ===== */
+#reset {
+  width: 100%;
+  margin-top: 50px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #dc2626;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+#reset:hover {
+  background: #b91c1c;
+}
+
+/* ===== OPTIONAL SCORE TEXT (if added later) ===== */
+.score {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 420px) {
+  .game-container {
+    width: 90%;
+    padding: 24px;
+  }
+
+  button img {
+    width: 60px;
+    height: 60px;
+  }
+}
